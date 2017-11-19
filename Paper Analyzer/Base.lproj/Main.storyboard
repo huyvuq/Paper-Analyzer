@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ZK0-wm-Dle">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Paper_Analyzer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Deep Sea Space.png" translatesAutoresizingMaskIntoConstraints="NO" id="ATC-70-kgJ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="I is a engineer. How is you. I is good" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sgG-VE-iM9">
+                                <rect key="frame" x="20" y="84" width="374" height="577"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xxD-P5-3bK">
+                                <rect key="frame" x="20" y="681" width="100" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="duD-mW-RQT"/>
+                                    <constraint firstAttribute="width" constant="100" id="mLQ-b5-zeW"/>
+                                </constraints>
+                                <state key="normal" image="compact-camera">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="btn_scanCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fjr-Ky-Piv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXk-Lx-Vnk">
+                                <rect key="frame" x="157.66666666666669" y="681" width="100.00000000000006" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="AJG-oL-sKp"/>
+                                    <constraint firstAttribute="height" constant="40" id="m8L-ff-pNW"/>
+                                </constraints>
+                                <state key="normal" image="photo">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="btn_scanLibrary:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t4K-ns-1lJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kln-Zd-Lkl">
+                                <rect key="frame" x="294" y="681" width="100" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="f5k-Wp-keF"/>
+                                    <constraint firstAttribute="width" constant="100" id="kDr-mm-6kL"/>
+                                </constraints>
+                                <state key="normal" image="analyze">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="btn_analyze:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ObB-wC-reg"/>
+                                    <segue destination="QGE-ZV-8lw" kind="show" id="1JT-qB-mhp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lXk-Lx-Vnk" secondAttribute="bottom" constant="15" id="3Y2-5z-4VC"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xxD-P5-3bK" secondAttribute="bottom" constant="15" id="7Yn-P2-9DU"/>
+                            <constraint firstItem="sgG-VE-iM9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="DfB-c6-pQe"/>
+                            <constraint firstItem="ATC-70-kgJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="IdT-Ew-kJs"/>
+                            <constraint firstItem="sgG-VE-iM9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="MlV-bq-QWE"/>
+                            <constraint firstItem="sgG-VE-iM9" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="RP2-8t-a4G"/>
+                            <constraint firstItem="kln-Zd-Lkl" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Sep-ev-mkd"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ATC-70-kgJ" secondAttribute="bottom" id="VUZ-8o-cF5"/>
+                            <constraint firstAttribute="trailing" secondItem="ATC-70-kgJ" secondAttribute="trailing" id="WeT-ar-q4h"/>
+                            <constraint firstItem="ATC-70-kgJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="bS5-5m-zBs"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kln-Zd-Lkl" secondAttribute="bottom" constant="15" id="cQ3-BY-lVl"/>
+                            <constraint firstItem="lXk-Lx-Vnk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gWu-rP-jnB"/>
+                            <constraint firstItem="xxD-P5-3bK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="iFX-fY-PsA"/>
+                            <constraint firstItem="kln-Zd-Lkl" firstAttribute="top" secondItem="sgG-VE-iM9" secondAttribute="bottom" constant="20" id="pPL-p3-LSF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home" id="9xK-8h-COp"/>
+                    <connections>
+                        <outlet property="ol_analyze" destination="kln-Zd-Lkl" id="tGN-6M-Wnh"/>
+                        <outlet property="ol_camera" destination="xxD-P5-3bK" id="bdb-Wq-LcU"/>
+                        <outlet property="ol_library" destination="lXk-Lx-Vnk" id="mgw-zS-0fF"/>
+                        <outlet property="textView" destination="sgG-VE-iM9" id="72h-Py-Oed"/>
+                        <segue destination="QGE-ZV-8lw" kind="show" id="Whe-Ri-CND"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="971.01449275362324" y="-562.5"/>
+        </scene>
+        <!--Analyze View Controller-->
+        <scene sceneID="uaY-0v-XJm">
+            <objects>
+                <viewController storyboardIdentifier="analyze" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QGE-ZV-8lw" customClass="AnalyzeViewController" customModule="Paper_Analyzer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ly9-zo-Ox6"/>
+                        <viewControllerLayoutGuide type="bottom" id="gfR-Eh-M3Y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Jk1-lc-iOC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Deep Sea Space.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZcI-6P-7bM">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Text is empty" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nAs-DA-2CM">
+                                <rect key="frame" x="20" y="79" width="374" height="299"/>
+                                <color key="backgroundColor" white="1" alpha="0.84999999999999998" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Analyzing..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ktn-Eq-3A3">
+                                <rect key="frame" x="20" y="393" width="374" height="328"/>
+                                <color key="backgroundColor" white="1" alpha="0.84999999999999998" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JKv-2J-unk">
+                                <rect key="frame" x="192" y="353" width="30" height="30"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZcI-6P-7bM" firstAttribute="top" secondItem="Jk1-lc-iOC" secondAttribute="top" id="11j-Mv-e7F"/>
+                            <constraint firstItem="nAs-DA-2CM" firstAttribute="leading" secondItem="Jk1-lc-iOC" secondAttribute="leadingMargin" id="4l5-1a-gfb"/>
+                            <constraint firstItem="Ktn-Eq-3A3" firstAttribute="leading" secondItem="Jk1-lc-iOC" secondAttribute="leadingMargin" id="54O-Zh-Xa1"/>
+                            <constraint firstItem="JKv-2J-unk" firstAttribute="centerY" secondItem="Jk1-lc-iOC" secondAttribute="centerY" id="8d0-bK-bL7"/>
+                            <constraint firstItem="nAs-DA-2CM" firstAttribute="top" secondItem="ly9-zo-Ox6" secondAttribute="bottom" constant="15" id="GH0-sx-Fg7"/>
+                            <constraint firstItem="gfR-Eh-M3Y" firstAttribute="top" secondItem="Ktn-Eq-3A3" secondAttribute="bottom" constant="15" id="J7I-hl-DyJ"/>
+                            <constraint firstItem="ZcI-6P-7bM" firstAttribute="leading" secondItem="Jk1-lc-iOC" secondAttribute="leading" id="VmQ-9G-5yg"/>
+                            <constraint firstItem="gfR-Eh-M3Y" firstAttribute="top" secondItem="ZcI-6P-7bM" secondAttribute="bottom" id="aLT-Fj-fEn"/>
+                            <constraint firstItem="nAs-DA-2CM" firstAttribute="bottom" secondItem="JKv-2J-unk" secondAttribute="bottom" constant="-5" id="b9b-Kc-DRJ"/>
+                            <constraint firstItem="Ktn-Eq-3A3" firstAttribute="trailing" secondItem="Jk1-lc-iOC" secondAttribute="trailingMargin" id="h6T-kI-xWE"/>
+                            <constraint firstItem="nAs-DA-2CM" firstAttribute="trailing" secondItem="Jk1-lc-iOC" secondAttribute="trailingMargin" id="hhp-Hx-RZG"/>
+                            <constraint firstAttribute="trailing" secondItem="ZcI-6P-7bM" secondAttribute="trailing" id="hsl-dJ-ImV"/>
+                            <constraint firstItem="Ktn-Eq-3A3" firstAttribute="top" secondItem="JKv-2J-unk" secondAttribute="top" constant="40" id="mg3-W8-z2C"/>
+                            <constraint firstItem="JKv-2J-unk" firstAttribute="centerX" secondItem="Jk1-lc-iOC" secondAttribute="centerX" id="yf0-gK-Iul"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mistakeTextView" destination="Ktn-Eq-3A3" id="Yan-Pe-699"/>
+                        <outlet property="sourceTextView" destination="nAs-DA-2CM" id="f9P-36-6C9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2BV-iz-zNb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1773.913043478261" y="-561.68478260869574"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pog-AT-WB3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZK0-wm-Dle" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="63g-fA-V9Y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="sHZ-oG-pWC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R3f-6V-eEt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="181.59999999999999" y="-560.86956521739137"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Deep Sea Space.png" width="1080" height="1920"/>
+        <image name="analyze" width="33" height="33"/>
+        <image name="compact-camera" width="33" height="33"/>
+        <image name="photo" width="33" height="33"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Whe-Ri-CND"/>
+    </inferredMetricsTieBreakers>
+</document>

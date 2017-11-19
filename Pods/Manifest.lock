@@ -1,0 +1,18 @@
+PODS:
+  - Alamofire (4.5.1)
+  - ALCameraViewController (2.0.3)
+  - TesseractOCRiOS (4.0.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.5)
+  - ALCameraViewController (~> 2.0.3)
+  - TesseractOCRiOS (= 4.0.0)
+
+SPEC CHECKSUMS:
+  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  ALCameraViewController: 7b86c2888df0e63f53a801e9d96fe194f51157ec
+  TesseractOCRiOS: 90638afbe43d082433f2e76b384c7901d23956df
+
+PODFILE CHECKSUM: 04fef861dece7f6e736aeca0fe5eaf33d2257d5d
+
+COCOAPODS: 1.2.1
