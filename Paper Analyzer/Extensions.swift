@@ -32,7 +32,6 @@ extension UITextView{
         textView.layer.shadowOpacity = 0.7
         textView.layer.shadowOffset = CGSize(width: 3.0, height: 2.0)
         textView.layer.shadowRadius = 5.0
-//        textView.contentInset = UIEdgeInsets(top: 2, left: 10, bottom: 2, right: 10)
     }
 }
 

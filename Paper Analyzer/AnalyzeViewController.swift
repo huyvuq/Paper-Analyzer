@@ -20,6 +20,15 @@ class AnalyzeViewController: UIViewController {
     @IBOutlet weak var mistakeTextView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        UITextView.addShadow(textView: sourceTextView)
+        sourceTextView.textContainerInset = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+        sourceTextView.clipsToBounds = true
+
+        UITextView.addShadow(textView: mistakeTextView)
+        mistakeTextView.textContainerInset = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+        mistakeTextView.clipsToBounds = true
+
         self.requestAnalyze()
         // Do any additional setup after loading the view.
     }

@@ -17,6 +17,9 @@
 		187C82091FC0C7630039354A /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 187C82081FC0C7630039354A /* tessdata */; };
 		187C820B1FC0CC5D0039354A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187C820A1FC0CC5D0039354A /* Extensions.swift */; };
 		18C496ED1FC0D5EB0080AAA3 /* AnalyzeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C496EC1FC0D5EB0080AAA3 /* AnalyzeViewController.swift */; };
+		18C496EF1FC132540080AAA3 /* PopUpTranslationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C496EE1FC132540080AAA3 /* PopUpTranslationView.swift */; };
+		18C496F11FC143A50080AAA3 /* TranslationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C496F01FC143A50080AAA3 /* TranslationViewController.swift */; };
+		18C496F31FC151440080AAA3 /* PopUpScanFromSourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C496F21FC151440080AAA3 /* PopUpScanFromSourceView.swift */; };
 		80F44CDEF6F28D072199C92A /* Pods_Paper_Analyzer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E399CF3C900A07C2D7F5795 /* Pods_Paper_Analyzer.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +36,9 @@
 		187C82081FC0C7630039354A /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
 		187C820A1FC0CC5D0039354A /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		18C496EC1FC0D5EB0080AAA3 /* AnalyzeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyzeViewController.swift; sourceTree = "<group>"; };
+		18C496EE1FC132540080AAA3 /* PopUpTranslationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpTranslationView.swift; sourceTree = "<group>"; };
+		18C496F01FC143A50080AAA3 /* TranslationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslationViewController.swift; sourceTree = "<group>"; };
+		18C496F21FC151440080AAA3 /* PopUpScanFromSourceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpScanFromSourceView.swift; sourceTree = "<group>"; };
 		2E399CF3C900A07C2D7F5795 /* Pods_Paper_Analyzer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Paper_Analyzer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CE5C403451A6B3011A242BB /* Pods-Paper Analyzer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Paper Analyzer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Paper Analyzer/Pods-Paper Analyzer.debug.xcconfig"; sourceTree = "<group>"; };
 		C522455D392487A0DF9F573F /* Pods-Paper Analyzer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Paper Analyzer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Paper Analyzer/Pods-Paper Analyzer.release.xcconfig"; sourceTree = "<group>"; };
@@ -73,10 +79,13 @@
 			children = (
 				187C82051FC0BF0F0039354A /* Resouces */,
 				187C81F11FC0BA9A0039354A /* AppDelegate.swift */,
+				18C496EE1FC132540080AAA3 /* PopUpTranslationView.swift */,
 				187C81F31FC0BA9A0039354A /* ViewController.swift */,
 				187C82061FC0BF9B0039354A /* SwiftyJSON.swift */,
 				187C820A1FC0CC5D0039354A /* Extensions.swift */,
 				187C81F51FC0BA9A0039354A /* Main.storyboard */,
+				18C496F21FC151440080AAA3 /* PopUpScanFromSourceView.swift */,
+				18C496F01FC143A50080AAA3 /* TranslationViewController.swift */,
 				187C82081FC0C7630039354A /* tessdata */,
 				187C81F81FC0BA9A0039354A /* Assets.xcassets */,
 				187C81FA1FC0BA9A0039354A /* LaunchScreen.storyboard */,
@@ -238,8 +247,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				187C82071FC0BF9B0039354A /* SwiftyJSON.swift in Sources */,
+				18C496F31FC151440080AAA3 /* PopUpScanFromSourceView.swift in Sources */,
+				18C496F11FC143A50080AAA3 /* TranslationViewController.swift in Sources */,
 				187C81F41FC0BA9A0039354A /* ViewController.swift in Sources */,
 				187C81F21FC0BA9A0039354A /* AppDelegate.swift in Sources */,
+				18C496EF1FC132540080AAA3 /* PopUpTranslationView.swift in Sources */,
 				18C496ED1FC0D5EB0080AAA3 /* AnalyzeViewController.swift in Sources */,
 				187C820B1FC0CC5D0039354A /* Extensions.swift in Sources */,
 			);
