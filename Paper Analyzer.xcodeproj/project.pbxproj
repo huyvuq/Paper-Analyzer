@@ -79,6 +79,7 @@
 			children = (
 				187C82051FC0BF0F0039354A /* Resouces */,
 				187C81F11FC0BA9A0039354A /* AppDelegate.swift */,
+				18C496EC1FC0D5EB0080AAA3 /* AnalyzeViewController.swift */,
 				18C496EE1FC132540080AAA3 /* PopUpTranslationView.swift */,
 				187C81F31FC0BA9A0039354A /* ViewController.swift */,
 				187C82061FC0BF9B0039354A /* SwiftyJSON.swift */,
@@ -90,7 +91,6 @@
 				187C81F81FC0BA9A0039354A /* Assets.xcassets */,
 				187C81FA1FC0BA9A0039354A /* LaunchScreen.storyboard */,
 				187C81FD1FC0BA9A0039354A /* Info.plist */,
-				18C496EC1FC0D5EB0080AAA3 /* AnalyzeViewController.swift */,
 			);
 			path = "Paper Analyzer";
 			sourceTree = "<group>";

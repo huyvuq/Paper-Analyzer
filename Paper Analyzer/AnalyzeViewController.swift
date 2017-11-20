@@ -11,8 +11,8 @@ import Alamofire
 
 let networkAppDirectory = "grammarchecker/"
 //let networkURL = "http://localhost/~apple/" + networkAppDirectory
-let networkURL = "http://34.204.53.195/" + networkAppDirectory
-
+//let networkURL = "http://34.204.53.195/" + networkAppDirectory
+let networkURL = "http://52.201.16.222/" + networkAppDirectory
 class AnalyzeViewController: UIViewController {
     var requestText: String?
     
@@ -119,5 +119,4 @@ class AnalyzeViewController: UIViewController {
             }
         }
     }
-    
 }

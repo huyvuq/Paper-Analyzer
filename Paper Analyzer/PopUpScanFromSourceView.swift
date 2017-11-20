@@ -12,7 +12,17 @@ class PopUpScanFromSourceView: UIView, UIPickerViewDelegate, UIPickerViewDataSou
     
     
     //data picker
-    var languageArray : [String?] = ["eng","fra"]
+    var languageArrayMap : [language] = [language.init(languageName: "English", languageSymbol: "eng"),
+                                      language.init(languageName: "Chinese Simple", languageSymbol: "chi-sim"),
+                                      language.init(languageName: "Chinese Traditional", languageSymbol: "chi-tra"),
+                                      language.init(languageName: "Japanese", languageSymbol: "jpn"),
+                                      language.init(languageName: "French", languageSymbol: "fra"),
+                                      language.init(languageName: "Korean", languageSymbol: "kor"),
+                                      language.init(languageName: "Lao", languageSymbol: "lao"),
+                                      language.init(languageName: "Indian", languageSymbol: "ind"),
+                                      language.init(languageName: "Spanish", languageSymbol: "spa"),
+                                      language.init(languageName: "Vietnamese", languageSymbol: "vie")]
+    
     var pickedLanguage = "eng"
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -20,15 +30,20 @@ class PopUpScanFromSourceView: UIView, UIPickerViewDelegate, UIPickerViewDataSou
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return languageArray.count
+        return languageArrayMap.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return languageArray[row]
+        return languageArrayMap[row].languageName
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        pickedLanguage = languageArray[row]!;
+        pickedLanguage = languageArrayMap[row].languageSymbol;
     }
 
+}
+
+struct language {
+    var languageName = ""
+    var languageSymbol = ""
 }

@@ -13,6 +13,7 @@ import TesseractOCR
 
 var googleURL = "https://translation.googleapis.com/language/translate/v2"
 var googleAPIKey = "AIzaSyAm9QRWeYFSLq1RXF4uSEd0IwfLYoO0QzM"
+var languageDict = [String : String]()
 
 class ViewController: UIViewController, G8TesseractDelegate, UITextViewDelegate {
     var image : UIImage?
@@ -75,6 +76,7 @@ class ViewController: UIViewController, G8TesseractDelegate, UITextViewDelegate 
         textView.delegate = self
 
         self.updateSupportedLanguage()
+        self.setUpLanguageDictionary()
     }
 
     override func didReceiveMemoryWarning() {
@@ -196,11 +198,117 @@ class ViewController: UIViewController, G8TesseractDelegate, UITextViewDelegate 
     
     @IBAction func btn_submitChangeLanguage(_ sender: Any) {
         animateOut(popupView: popUpScanFromLanguageView)
-        let scanFromLanguageView = self.popUpScanFromLanguageView as! PopUpScanFromSourceView
-        scannedFromLanguage = scanFromLanguageView.pickedLanguage
+        scannedFromLanguage = self.popUpScanFromLanguageView.pickedLanguage
     }
     @IBAction func btn_cancelChooseScanningLanguage(_ sender: Any) {
         animateOut(popupView: popUpScanFromLanguageView)
+    }
+    
+    func setUpLanguageDictionary(){
+        languageDict["af"] = "Afrikaans"
+        languageDict["am"] = "Amharic"
+        languageDict["ar"] = "Arabic"
+        languageDict["az"] = "Azerbaijani"
+        languageDict["be"] = "Belarusian "
+        languageDict["bg"] = "Bulgarian"
+        languageDict["bn"] = "Bengali"
+        languageDict["bs"] = "Bosnian"
+        languageDict["ca"] = "Catalan; Valencian"
+        languageDict["ceb"] = "Cebuano"
+        languageDict["co"] = "Corsican "
+        languageDict["cs"] = "Czech"
+        languageDict["cy"] = "Welsh"
+        languageDict["da"] = "Danish"
+        languageDict["de"] = "German "
+        languageDict["el"] = "Greek, Modern"
+        languageDict["en"] = "English"
+        languageDict["eo"] = "Esperanto"
+        languageDict["es"] = "Español"
+        languageDict["et"] = "Estonian "
+        languageDict["eu"] = "Basque"
+        languageDict["fa"] = "Farsi"
+        languageDict["fi"] = "Finnish"
+        languageDict["fr"] = "French"
+        languageDict["fy"] = "Western Frisian"
+        languageDict["ga"] = "Irish"
+        languageDict["gd"] = "Gaelic (Scottish)"
+        languageDict["gl"] = "Galician"
+        languageDict["gu"] = "Gujarati"
+        languageDict["ha"] = "Hausa"
+        languageDict["haw"] = "Hausa"
+        languageDict["hi"] = "Hindi"
+        languageDict["hmn"] = "Hmong"
+        languageDict["hr"] = " Croatian"
+        languageDict["ht"] = "Haitian Creole"
+        languageDict["hu"] = "Hungarian"
+        languageDict["hy"] = "Armenian"
+        languageDict["id"] =  "Indonesian"
+        languageDict["ig"] = "Igbo"
+        languageDict["is"] = "Icelandic"
+        languageDict["it"] = "Italian"
+        languageDict["iw"] = "Hebrew"
+        languageDict["ja"] = "Japanese"
+        languageDict["jw"] = "Javanese"
+        languageDict["ka"] = "Georgian"
+        languageDict["kk"] = "Kazakh"
+        languageDict["km"] = "Cambodian"
+        languageDict["kn"] = " Kannada "
+        languageDict["ko"] = "Korean"
+        languageDict["ku"] = "Kurdish"
+        languageDict["ky"] = "Kirghiz"
+        languageDict["la"] = "Latin"
+        languageDict["lb"] = "Luxembourgish"
+        languageDict["lo"] = "Laotian"
+        languageDict["lt "] = "Lithuanian"
+        languageDict["lv"] = "Latvian (Lettish)"
+        languageDict["mg"] = "Malagasy"
+        languageDict["mi"] = "Maori"
+        languageDict["mk"] = "Macedonian"
+        languageDict["ml"] = "Malayalam"
+        languageDict["mn"] = "Mongolian"
+        languageDict["mr "] = "Marathi"
+        languageDict["ms"] = "Malay"
+        languageDict["mt"] = "Maltese"
+        languageDict["my"] = "Burmese"
+        languageDict["ne"] = "Nepali"
+        languageDict["nl"] = "Dutch"
+        languageDict["no "] = "Norwegian"
+        languageDict["ny"] = "Chichewa, Chewa, Nyanja"
+        languageDict["pa"] = "Punjabi (eastern)"
+        languageDict["pl"] = "Polish"
+        languageDict["ps"] = "Pashto, Pushto"
+        languageDict["pt"] = "Portuguese"
+        languageDict["ro"] = "Romanian"
+        languageDict["ru"] = "Russian"
+        languageDict["sd"] = "Sindhi"
+        languageDict["si"] = "Sinhalese"
+        languageDict["sk"] = "Slovak"
+        languageDict["sl "] = "Slovenian"
+        languageDict["sm"] = "Samoan"
+        languageDict["sn"] = "Shona"
+        languageDict["so"] = "Somali"
+        languageDict["sq"] = "Albanian"
+        languageDict["sr"] = "Serbian"
+        languageDict["st"] = "Sesotho"
+        languageDict["su"] = "Sundanese"
+        languageDict["sv"] = "Swedish"
+        languageDict["sw"] = "Swahili (Kiswahili)"
+        languageDict["ta"] = "Tamil"
+        languageDict["te"] = "Telugu "
+        languageDict["tg"] = "Tajik"
+        languageDict["th"] = "Thai"
+        languageDict["tl"] = "Tagalog"
+        languageDict["tr "] = "Turkish"
+        languageDict["uk"] = "Ukranian"
+        languageDict["ur"] = "Urdu"
+        languageDict["uz"] = "Uzbek"
+        languageDict["vi"] = "Vietnamese"
+        languageDict["xh"] = "Xhosa"
+        languageDict["yi"] = "Yiddish"
+        languageDict["yo"] = "Yoruba"
+        languageDict["zh"] = "Chinese"
+        languageDict["zh-TW"] = "Chinese (T)"
+        languageDict["zu"] = "Zulu"
     }
 }
 

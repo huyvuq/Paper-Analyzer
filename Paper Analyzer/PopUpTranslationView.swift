@@ -10,7 +10,6 @@ import UIKit
 
 class PopUpTranslationView: UIView, UIPickerViewDelegate, UIPickerViewDataSource  {
     
-    
     //data picker
     var languageArray : [String?] = []
     var pickedLanguage = "en"
@@ -24,6 +23,10 @@ class PopUpTranslationView: UIView, UIPickerViewDelegate, UIPickerViewDataSource
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        let str = languageDict[languageArray[row]!]
+        if str != nil && !(str?.isEmpty)!{
+            return str;
+        }
         return languageArray[row]
     }
     
@@ -36,4 +39,3 @@ class PopUpTranslationView: UIView, UIPickerViewDelegate, UIPickerViewDataSource
         print(pickedLanguage)
     }
 }
-
